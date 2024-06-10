@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playing with Computer</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <h1>Playing with Computer</h1>
+    <a href="./index.html">
+        <button class="mode-btn home-btn">⬅️Back to Home</button>
+    </a>
+    <div class="scoreboard">
+        <p class="js-result"></p>
+        <p class="js-moves"></p>
+        <p class="js-scores scores-data"></p>
+    </div>
+    <div class="dashboard">
+        <button class="game-btn rock-btn" onclick="
+            playGames('rock');
+        
+        ">✊
+        </button>
+        <button class="game-btn paper-btn" onclick="
+            playGames('paper');
+
+        ">
+            ✋
+        </button>
+        <button class="game-btn scissor-btn" onclick="
+
+            playGames('scissor');
+
+        ">
+            ✌️
+        </button>
+        <button class="game-btn js-scissor-btn" onclick="
+        scores.wins = 0;
+        scores.losses = 0;
+        scores.ties = 0;
+        localStorage.removeItem('scores');
+        updateScores();
+        ">
+            🔄️
+        </button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

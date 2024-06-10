@@ -1,0 +1,206 @@
+body {
+    background-color: #040700;
+    background-image: url(2.jpg);
+    background-position-x: center;
+    color: aliceblue;
+    text-align: center;
+}
+
+h1 {
+    font-size: 4.5rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 2px 2px 10px rgba(199, 124, 12, 0.89);
+    text-align: center;
+}
+
+.game-mode {
+    margin-top: 100px;
+    text-decoration: none;
+}
+
+/* mode - btn design */
+.mode-btn {
+    padding: 1em 3em;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.mode-btn:before {
+    content: "";
+    background: linear-gradient(45deg,
+            #ff0000,
+            #ff7300,
+            #fffb00,
+            #48ff00,
+            #00ffd5,
+            #002bff,
+            #7a00ff,
+            #ff00c8,
+            #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbtn 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+@keyframes glowingbtn {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.mode-btn:active {
+    color: #000;
+}
+
+.mode-btn:active:after {
+    background: transparent;
+}
+
+.mode-btn:hover:before {
+    opacity: 1;
+}
+
+.mode-btn:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+/* mode-btn end */
+
+.home-btn {
+    margin-bottom: 50px;
+}
+
+.scoreboard {
+    position: relative;
+    padding: 20px;
+    width: 500px;
+    font: 20px sans-serif;
+    height: 150px;
+    border: 2px solid wheat;
+    margin: 0px auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+}
+
+.dashboard {
+    width: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: rgba(7, 7, 7, 0.788);
+    border: 2px solid wheat;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin: auto;
+}
+
+.game-btn {
+    background-color: rgba(7, 7, 7, 0.788);
+    font-size: 5rem;
+    padding: 30px 60px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgb(143, 141, 141);
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
+
+}
+
+.game-btn:hover {
+    box-shadow: 0px 0px 10px rgb(9, 136, 255);
+    transition: 300ms ease-in;
+}
+
+.scores-data {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+/* Mobile devices (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    body {
+        font-size: 20px;
+
+    }
+
+    ;
+
+    .scoreboard {
+        width: 100%;
+        margin: 20px;
+    }
+
+    ;
+
+    .dashboard {
+        width: 100%;
+        margin: 20px;
+    }
+
+    ;
+
+    .game-btn {
+        font-size: 50px;
+        padding: 20px 30px;
+        margin: 5px;
+    }
+
+    ;
+}
+
+/* Smaller mobile devices (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+   
+    .scoreboard {
+        width: 300px;
+        height: 80px;
+        font-size: 14px;
+    }
+
+    .dashboard {
+        width: 300px;
+        height: 200px;
+    }
+
+    .game-btn {
+        font-size: 50px;
+        padding: 10px 20px;
+    }
+}
