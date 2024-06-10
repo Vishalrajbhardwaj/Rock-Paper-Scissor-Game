@@ -1,6 +1,5 @@
 ﻿# Rock-Paper-Scissor-Game
-**<a href="https://github.com/Vishalrajbhardwaj/Rock-Paper-Scissor-Game"> Play This Game </a>
-</br>**
+
 <h2> <b>The Game Rules is:</b></h2>
 <pre>
 Rock beats Scissors,
